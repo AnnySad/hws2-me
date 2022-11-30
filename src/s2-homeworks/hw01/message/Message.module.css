@@ -1,0 +1,59 @@
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageAndText {
+    display: flex;
+}
+
+.imageAndText img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.text {
+    background: #F5F7FB;
+  /*  box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+  */  border-radius: 10px 10px 10px 0;
+    position: relative;
+    padding: 8px 13px 8px 27px;
+}
+
+.text:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(57px at top left, transparent 59%, #F5F7FB 5%) no-repeat right bottom;
+    /*
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    */
+}
+
+.name {
+    color: #1d0f7a;
+    font-size: 15px;
+}
+
+.messageText {
+    color: #171817;
+    font-size: 13px;
+}
+
+.time {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #000000;
+}
+
