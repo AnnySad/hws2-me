@@ -4,9 +4,7 @@ import {MessageType, UserMassageType, UserType} from "../HW1";
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
-    //id:string
     message:  MessageType
-   // user:UserType
 }
 
 // нужно отобразить приходящие данные
