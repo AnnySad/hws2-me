@@ -13,7 +13,7 @@ export const pureAddUser = (name: string, setError: (error:string)=>void, setNam
         //setTimeout(() => alert(`Hello ${name} !`), 10);
         setName('')
     } else {
-        setError('еррор')
+        setError('Ошибка! Введите имя!')
     }
 // addUserCallback(name)
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
@@ -21,7 +21,7 @@ export const pureAddUser = (name: string, setError: (error:string)=>void, setNam
 
 export const pureOnBlur = (name: string, setError: (error:string)=>void) => { // если имя пустое - показать ошибку
     if (name.trim() === '') {
-        setError('name is require!')
+        setError('Ошибка! Введите имя!')
     }
 }
 
