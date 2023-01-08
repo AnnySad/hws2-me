@@ -36,9 +36,13 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e) // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
+        onChange?.(e) && onChange(e) // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
+        onChangeText && onChangeText?.(e.currentTarget.value)
 
-        onChangeText?.(e.currentTarget.value)
+       /* onChange // если есть пропс onChange
+        && onChange(e); // то передать ему е (поскольку onChange не обязателен)
+
+        onChangeText && onChangeText(e.currentTarget.value);*/
     }
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
         onKeyPress?.(e)
@@ -53,22 +57,27 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = s.input
         + (error ? ' ' + s.errorInput : ' ' + s.superInput)
         + (className ? ' ' + s.className : '') // задача на смешивание классов
-
+    /*const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ""}`;
+    const finalInputClassName = `${s.input} ${error ? s.errorInput : s.superInput} ${className}`;*/
     return (
         <div className={s.inputWrapper}>
+            <span
+                id={id ? id + '-span' : undefined}
+                className={finalSpanClassName}
+            >
+            {error}
             <input
                 id={id}
                 type={'text'}
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}
                 className={finalInputClassName}
+                placeholder="Please enter text"
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-            <span
-                id={id ? id + '-span' : undefined}
-                className={finalSpanClassName}
-            >
-                {error}
+
+
+               {/* {error && <span className={finalSpanClassName}>{error}</span>}*/}
             </span>
         </div>
     )

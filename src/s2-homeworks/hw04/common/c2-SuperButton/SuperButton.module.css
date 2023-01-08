@@ -1,36 +1,165 @@
 .button {
+    /*position: relative;*/
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .disabled {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+
+    width: 133px;
+    height: 30px;
+    left: 574px;
+    top: 1573px;
+
+    background: #004D99;
+    opacity: 0.5;
+    border-radius: 3px;
 }
 
 .secondary {
+    width: 153px;
+    height: 30px;
+
+    color: #0066CC;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: 1px solid #004D99;
+    border-radius: 3px;
 }
 
 .default {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+    width: 132px;
+    height: 30px;
+    left: 574px;
+    top: 1465px;
+    background: #004D99;
+    border-radius: 3px;
+    border: 1px solid #004D99;
+    color: white;
+    opacity: 0.5;
 }
 
 .red {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+
+    width: 129px;
+    height: 30px;
+    left: 576px;
+    top: 1519px;
+
+    background: #CC1439;
+    border: 1px solid #CC1439;
+    border-radius: 3px;
+    color: white;
 }
 
 .default:hover {
+    transition: .5s linear;
+    background: #0080FF;
+    width: 153px;
 }
 
 .red:hover {
+    transition: .5s linear;
+    background: #FF1A47;
+    width: 153px;
 }
 
 .secondary:hover {
+    transition: .5s linear;
+    background: #E5F0FA;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
 }
 
 
 .default:active {
+    background: #0059B3;
+    border-radius: 3px;
 }
 
 .secondary:active {
+    background: #C9E5FF;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
 }
 
 .red:active {
+    background: #B31232;
+    border-radius: 3px;
 }
 
 .button:disabled {
+    cursor: auto;
+    background: #004D99;
+    opacity: 0.5;
+    border-radius: 3px;
 }
+
+/*.button:disabled::after{
+    z-index: -1;
+}
+.button:disabled::before{
+    z-index: -1;
+}*/
+
+/*
+
+.button::after{
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -130%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+
+    transform: skew(45deg);
+
+    background-color: #d8ecd3;
+    opacity: 0.7;
+
+    z-index: 14;
+}
+
+.button:hover::after{
+    animation: blink 0.35s ease;!*!/https://html5book.ru/css3-animation!*!
+}
+
+.button:hover::before{
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 300vw;
+
+    background-color: #d8ecd3;
+    opacity: 0.2;
+
+    z-index: 7;
+}
+*/
