@@ -3,6 +3,9 @@ import { HashRouter } from 'react-router-dom'
 import { Layout } from './layout/Layout'
 import Pages from './Pages'
 
+import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from "@material-ui/core";
+import {Menu} from "@material-ui/icons";
+import {Header} from "./header/Header";
 /*
 * 1 - в файле Pages.tsx дописать роуты на все страницы
 * 2 - в файле Sidebar.tsx дописать className так чтоб вешался класс s.active когда мы уже на соответствующей странице
