@@ -1,5 +1,21 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 40px;
+
+    //position: absolute;
+    width: 129px;
+    height: 30px;
+    left: 210px;
+    top: 244px;
+
+    border: 1px solid #0066CC;
+    border-radius: 3px;
 }
 
 .editableSpanContainer {
+
 }

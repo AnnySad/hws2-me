@@ -2,10 +2,23 @@
 }
 
 .span {
+
 }
 
 .input {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
 }
 
 .pen {
+    left: 16.65%;
+    right: 16.68%;
+    top: 8.57%;
+    bottom: 25%;
+
 }
