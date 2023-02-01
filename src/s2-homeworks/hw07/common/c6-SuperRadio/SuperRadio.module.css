@@ -1,9 +1,7 @@
 .radio {
 
     display: flex;
-    gap: 17px;
-    flex-wrap: wrap;
-    max-width: 450px;
+
 }
 
 .radio::before {
@@ -15,15 +13,20 @@
 
 
 .radio:checked::before {
-    left: 8.33%;
-    right: 8.33%;
-    top: 8.33%;
+    display: flex;
+
+    width: 24px;
+    height: 24px;
+    left: 358px;
+    top: 629px;
     bottom: 8.33%;
 
     background: #000000;
 }
 
 .label {
+    display: flex;
+    flex-wrap: wrap;
     width: 80px;
     height: 20px;
     left: 393px;
@@ -42,4 +45,5 @@
 }
 
 .options {
+
 }
