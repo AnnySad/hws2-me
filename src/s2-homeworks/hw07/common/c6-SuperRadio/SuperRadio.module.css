@@ -1,14 +1,44 @@
 .radio {
+
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    max-width: 450px;
 }
 
 .radio::before {
+    width: 24px;
+    height: 24px;
+    left: 358px;
+    top: 629px;
 }
 
 
 .radio:checked::before {
+    left: 8.33%;
+    right: 8.33%;
+    top: 8.33%;
+    bottom: 8.33%;
+
+    background: #000000;
 }
 
 .label {
+    width: 80px;
+    height: 20px;
+    left: 393px;
+    top: 589px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #000000;
+
 }
 
 .options {
