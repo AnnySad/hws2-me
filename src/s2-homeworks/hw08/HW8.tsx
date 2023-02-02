@@ -82,9 +82,9 @@ const HW8 = () => {
                         </SuperButton>
                     </div>
 
-                    <table id={'hw8-users'} className={s.users}>
+                    <table id={'hw8-users'} className={s.users} style={{margin: '20px 20px'}}>
                         <thead className={s.thead}>
-                        <tr>
+                        <tr className={s.tr}>
                             <td className={s.nameCol}>Name</td>
                             <td className={s.ageCol}>Age</td>
                         </tr>
