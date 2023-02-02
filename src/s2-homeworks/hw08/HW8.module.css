@@ -1,4 +1,9 @@
 .item {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+
+    margin-left: 10px;
 }
 
 .item:last-of-type {
@@ -8,6 +13,11 @@
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+
+    margin-left: 10px;
 }
 
 .container {
