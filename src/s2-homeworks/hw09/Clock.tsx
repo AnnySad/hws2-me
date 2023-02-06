@@ -22,6 +22,7 @@ function Clock() {
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
         clearInterval(timerId)
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
@@ -68,8 +69,8 @@ function Clock() {
                 <div className={s.more}>
                     {show ? (
                         <>
-                            <span id={'hw9-month'}>{stringMonth}</span>,{' '}
-                            <span id={'hw9-date'}>{stringDate}</span>
+                            <span id={'hw9-date'}>{stringDate}</span>,{' '}
+                            <span id={'hw9-month'}>{stringMonth}</span>
                         </>
                     ) : (
                         <>
@@ -81,15 +82,18 @@ function Clock() {
 
             <div className={s.buttonsContainer}>
                 <SuperButton
+
                     id={'hw9-button-start'}
-                    /*disabled={true} */// пишут студенты // задизэйблить если таймер запущен
+                    // disabled={!!timerId}   // пишут студенты // задизэйблить если таймер запущен
+                    disabled={timerId ? true : false}   // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
+
                     id={'hw9-button-stop'}
-                    /*disabled={true}*/ // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={timerId ? false : true}   // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
