@@ -2,11 +2,11 @@
     width: 90px;
     height: 90px;
 
-    border: 9px solid #f3f3f3;
+   /* border: 9px solid #f3f3f3;
     border-top: 9px solid #512DE4;
     border-radius: 50%;
 
-    animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;*/
 }
 
 @keyframes spin {
