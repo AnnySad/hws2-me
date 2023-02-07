@@ -9,7 +9,7 @@ const initState = {
     themeId: 1,
 }
 
-export const themeReducer = (state = initState, action: ActionType): typeof state=> { // fix any
+export const themeReducer = (state = initState, action: ActionType): any=> {
     switch (action.type) {
         case "SET_THEME_ID":{
             return {
