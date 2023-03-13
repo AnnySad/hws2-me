@@ -34,22 +34,25 @@ const HW14 = () => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
-                // делает студент
+                if (res) {
+                    setTechs(res.data.techs)
+                }
+                setLoading(false)
 
                 // сохранить пришедшие данные
 
-                //
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
-        // делает студент
+        const findQuery: { find?: string } = value ? {find: value} : {} // если нет - то не записывать в урл
+        const {find, ...lastQueries} = Object.fromEntries(searchParams)
+
+        setSearchParams({...lastQueries, ...findQuery})
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
 
-        //
     }
 
     useEffect(() => {
